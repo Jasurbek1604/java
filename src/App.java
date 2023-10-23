@@ -84,51 +84,92 @@ public class App {
 
         //!first
 
-        String[] names = {"Muhammad", "Ali", "Rasul", "Said", "Muhammad"};
-        int[] age = {20, 21, 22, 23, 24};
+        // String[] names = {"Muhammad", "Ali", "Rasul", "Said", "Muhammad"};
+        // int[] age = {20, 21, 22, 23, 24};
 
-        for (int i = 0; i < names.length; i++) {
-            System.out.println(names[i] + " " + age[i]);
-        }
+        // for (int i = 0; i < names.length; i++) {
+        //     System.out.println(names[i] + " " + age[i]);
+        // }
 
         //!second
 
-        int[] numbers = new int[5];
-        numbers[0] = 10;
-        numbers[1] = 20;
-        numbers[2] = 30;
-        numbers[3] = 40;
-        numbers[4] = 50;
+        // int[] numbers = new int[5];
+        // numbers[0] = 10;
+        // numbers[1] = 20;
+        // numbers[2] = 30;
+        // numbers[3] = 40;
+        // numbers[4] = 50;
 
-        for (int i = 0; i < numbers.length; i++) {
-            System.out.println("numbers[" + i + "] = " + numbers[i]);
-        }
+        // for (int i = 0; i < numbers.length; i++) {
+        //     System.out.println("numbers[" + i + "] = " + numbers[i]);
+        // }
 
-        //!thrid
-        int[][] matrix = new int[3][3]; 
+        // //!thrid
+        // int[][] matrix = new int[3][3]; 
 
-        for (int i = 0; i < 3; i++) {
-            for (int j = 0; j < 3; j++) {
-                matrix[i][j] = i * 3 + j + 1;
-                System.out.print(matrix[i][j] + " ");
-            }
-            System.out.println();
-        }
+        // for (int i = 0; i < 3; i++) {
+        //     for (int j = 0; j < 3; j++) {
+        //         matrix[i][j] = i * 3 + j + 1;
+        //         System.out.print(matrix[i][j] + " ");
+        //     }
+        //     System.out.println();
+        // }
 
-        //!fourth
+        // //!fourth
 
-        String[] Names = {"Alice", "Bob", "Charlie", "David"};
+        // String[] Names = {"Alice", "Bob", "Charlie", "David"};
 
-        for (String name : Names) {
-            System.out.println(name);
-        }
+        // for (String name : Names) {
+        //     System.out.println(name);
+        // }
 
-        //!fifth
+        // //!fifth
+
+    //     Object[] mixedArray = {"John", 25, 3.14, true};
+
+    //     for (Object item : mixedArray) {
+    //         System.out.println(item);
+    //     }
+
+
+    //!Arrays
+
+    String[] Students = {"Jasurbek O'telbayev", "Laziz Raxmonov", "Mo'minjon Qadambayev"};
+
+    for(int i = 0; i < Students.length; i++){
+        System.out.println("Talaba idsi:" + i + ", F.I.O " + Students[i]);
+    }
+
+    Scanner userInfo = new Scanner(System.in);
+    System.out.println("Talabaning idsini kiriting:");
+    int i = userInfo.nextInt();
         
-        Object[] mixedArray = {"John", 25, 3.14, true};
+        String sum = "";
 
-        for (Object item : mixedArray) {
-            System.out.println(item);
+        for(int j = 1; j <= 4; j++){
+            Scanner s = new Scanner(System.in);
+            System.out.println( Students[i]+ " ning "+ j + "-fandan olgan bahosi" + ": ");
+            String ball = s.nextLine();    
+            sum += ball;
         }
+
+        char targetChar = '2';
+        int count = 0;
+        
+        for (int k = 0; k < sum.length(); k++) {
+            if (sum.charAt(k) == targetChar) {
+                count++;
+            }
+        }
+
+        if(count >= 2) {
+            System.out.println("\n" + Students[i] + " kursdan kursga qoldirildi!\n");
+        } else if (count == 0){
+            System.out.println("\n" + Students[i] + " keyingi kursga o'tti!\n");
+        } else {
+            System.out.println("\n" + Students[i] +  " yozgi maktabda " + count + " ta fanni yopishi kerak!\n");
+        }
+        
     }
 }
+    
